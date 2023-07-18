@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter&family=Jost:wght@400;500;700&family=Lugrasimo&display=swap');
+
+.textHead{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  animation: glow 1000ms infinite alternate;
+  font-family: lugrasimo;
+  font-size: 50px;
+  word-spacing: 20px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:  0 0 10px #1877f2,
+                  0 0 20px #1459b3,
+                  0 0 30px #179bff
+  }
+  to {
+    text-shadow:  0 0 5px #1877f2,
+                  0 0 10px #1459b3,
+                  0 0 15px #179bff
+  }
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gridContainer > div {
+  padding: 2rem;
+  text-transform: capitalize;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 4s linear;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+}
+
+.ring:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+.load {
+  color: #737373;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 200px;
+}
+
+/* style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '24px', fontWeight: 700, color: 'rgba(0, 0, 0, 0.452)' }} */
